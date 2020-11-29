@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        android:layout_marginLeft="@dimen/margin_medium_3"
+        android:layout_marginTop="@dimen/margin_xxlarge"
+        android:layout_marginRight="@dimen/margin_medium_3"
+        android:layout_marginBottom="@dimen/margin_medium_3">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/doctorLoginEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        android:layout_marginLeft="@dimen/margin_medium_3"
+        android:layout_marginRight="@dimen/margin_medium_3">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/doctorLoginPswd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLoginDoc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:layout_margin="@dimen/margin_medium_3">
+
+    </com.google.android.material.button.MaterialButton>
+    <TextView
+        android:id="@+id/btnRegisterDoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/signup"
+        >
+
+    </TextView>
+</LinearLayout>

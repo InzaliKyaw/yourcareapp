@@ -1,0 +1,6 @@
+package com.example.shared.network.auth
+
+interface AuthManager {
+    fun login(email:String,password:String,onSuccess:()->Unit,onFailure:(String)->Unit)
+    fun register(email: String,password: String,userName:String,speciality:String,onSuccess: () -> Unit,onFailure: (String) -> Unit)
+}

@@ -1,0 +1,4 @@
+include ':doctors'
+include ':shared'
+include ':yourcare'
+rootProject.name = "YourCare"

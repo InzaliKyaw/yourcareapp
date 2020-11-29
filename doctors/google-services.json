@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "320909357588",
+    "firebase_url": "https://yourcare-f3526.firebaseio.com",
+    "project_id": "yourcare-f3526",
+    "storage_bucket": "yourcare-f3526.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:320909357588:android:a477b9dbf8d39b3d93ad01",
+        "android_client_info": {
+          "package_name": "com.example.doctors"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "320909357588-agaotn1uq7r2aafbge74ailat203cgur.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSqOoDwBEhp6-C9ltuLrMxRNAplzKboJk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "320909357588-agaotn1uq7r2aafbge74ailat203cgur.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
