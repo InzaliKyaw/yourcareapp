@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<androidx.appcompat.widget.Toolbar
+    android:id="@+id/checkOutToolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:title="@string/order_prescrption_mm"
+    >
+
+</androidx.appcompat.widget.Toolbar>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_medium_3"
+        android:elevation="@dimen/margin_medium_3"
+        app:cardCornerRadius="@dimen/margin_medium_4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/blue">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/margin_medium_4"
+                    android:text="@string/prescription_mm"
+                    android:textColor="@color/white">
+
+                </TextView>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPrescripeCheckout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/chat_bg"
+                android:layout_marginLeft="@dimen/margin_medium_4"
+                android:layout_marginRight="@dimen/margin_medium_4">
+            </View>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium_4">
+                <TextView
+                    android:id="@+id/totalTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/total"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins_bold"
+                    >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/priceTxT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/amount_sample"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins_bold"
+                    >
+                </TextView>
+            </RelativeLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_medium_3"
+        android:elevation="@dimen/margin_medium_3"
+        app:cardCornerRadius="@dimen/margin_medium_4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/blue">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/margin_medium_4"
+                    android:text="@string/address_mm"
+                    android:textColor="@color/white">
+
+                </TextView>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/choose_address_mm"
+                android:layout_margin="@dimen/margin_medium_4">
+            </TextView>
+            <TextView
+                android:id="@+id/addressText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium_4"
+                android:layout_marginRight="@dimen/margin_medium_4"
+                android:text="@string/address_detail_mm"
+                android:textColor="@color/text_grey"
+                android:fontFamily="@font/poppins_medium"
+                android:padding="@dimen/margin_medium_3"
+                android:background="@drawable/address_bg"
+                android:layout_marginBottom="@dimen/margin_medium_4"
+            >
+
+            </TextView>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium_4"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/stateMM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/state_mm">
+
+                </TextView>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/stateMM"
+                    android:layout_alignStart="@+id/stateMM"
+                    android:layout_margin="@dimen/margin_medium_4"
+                    android:backgroundTint="@color/white"
+                    android:elevation="@dimen/margin_medium_4"
+                    android:text="Yangon"
+                    android:textColor="@color/black"
+                    app:icon="@drawable/ic_ios_arrow_dropdown"
+                    app:iconGravity="textEnd"
+                    app:iconTint="@color/black"
+                    app:strokeColor="@color/chat_bg">
+
+                </com.google.android.material.button.MaterialButton>
+
+                <TextView
+                    android:id="@+id/townshipMM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:layout_toRightOf="@id/stateMM"
+                    android:text="@string/township_mm"></TextView>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/townshipMM"
+                    android:layout_alignStart="@+id/townshipMM"
+                    android:layout_margin="@dimen/margin_medium_4"
+                    android:layout_marginLeft="100dp"
+                    android:layout_toRightOf="@id/stateMM"
+                    android:backgroundTint="@color/white"
+                    android:elevation="@dimen/margin_medium_4"
+                    android:text="Tharketa"
+                    android:textColor="@color/black"
+                    app:icon="@drawable/ic_ios_arrow_dropdown"
+                    app:iconGravity="textEnd"
+                    app:iconTint="@color/black"
+                    app:strokeColor="@color/chat_bg">
+
+                </com.google.android.material.button.MaterialButton>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/addressDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium_4"
+                android:text="@string/address_detail_mm"
+                android:visibility="gone"></TextView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_margin="@dimen/margin_medium_4"
+                app:boxBackgroundColor="@color/white"
+                app:boxCornerRadiusBottomEnd="@dimen/margin_medium_4"
+                app:boxCornerRadiusBottomStart="@dimen/margin_medium_4"
+                app:boxCornerRadiusTopEnd="@dimen/margin_medium_4"
+                app:boxCornerRadiusTopStart="@dimen/margin_medium_4"
+                app:boxStrokeColor="@color/white"
+                android:visibility="gone">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/heightPatient"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCheckoutConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="@dimen/margin_medium_4"
+        android:layout_marginTop="@dimen/margin_medium_3"
+        android:layout_marginRight="@dimen/margin_medium_4"
+        android:backgroundTint="@color/blue"
+        android:text="@string/order_mm">
+
+    </com.google.android.material.button.MaterialButton>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

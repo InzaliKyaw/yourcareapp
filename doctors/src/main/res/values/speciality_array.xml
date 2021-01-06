@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="specialities_array" >
+        <item >အထွေထွေအထူးကု</item>
+        <item>ကလေးအထူးကု</item>
+        <item>မျက်စိအထူးကု</item>
+        <item>စိတ်ရောဂါအထူးကု</item>
+        <item>အစာအိမ်နှင့် အူလမ်းကြောင်းအထူးကု</item>
+        <item>နှလုံးအထူးကု</item>
+        <item>သွားနှင့် ခံတွင်းအထူးကု</item>
+        <item>နား,နှာခေါင်း,လည်ချောင်းအထူးကု</item>
+        <item>အရိုး အကြောအထူးကု</item>
+        <item>အရေပြားအထူးကု</item>
+    </string-array>
+</resources>

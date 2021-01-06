@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:elevation="20dp"
+    android:layout_margin="@dimen/margin_medium_4"
+    app:cardCornerRadius="8dp"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="11dp"
+                android:lineHeight="26sp"
+                android:text="@string/consultation_request_burmese"
+                android:textSize="17sp"
+                android:fontFamily="@font/poppins"
+                android:layout_weight="1">
+
+            </TextView>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:layout_weight="1"
+                android:layout_marginRight="15dp"
+                android:text="@string/new_patient_burmese"
+                android:textAlignment="center"
+                android:backgroundTint="@color/orange"
+                tools:ignore="RtlCompat">
+
+            </Button>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/profile_image"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:cardCornerRadius="30dp"
+                android:layout_margin="@dimen/margin_medium_3"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/profile_man"
+                    android:scaleType="centerCrop"
+                    >
+                </ImageView>
+            </com.google.android.material.card.MaterialCardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/patientNameReq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user_name"
+                    android:textSize="17sp"
+                    android:layout_marginStart="@dimen/margin_medium_3"
+                    >
+                </TextView>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margin_small">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/birthdate"
+                        android:layout_marginLeft="@dimen/margin_medium_3"
+                        >
+                    </TextView>
+                    <TextView
+                        android:id="@+id/patientBirthdayReq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/birthdate"
+                        android:layout_marginLeft="@dimen/margin_medium_3"
+                        >
+                    </TextView>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/margin_medium_3"
+            >
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancelBtnReq"
+                android:layout_width="149dp"
+                android:layout_height="39dp"
+                android:text="@string/cancel_burmese"
+                android:backgroundTint="@color/red"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="24dp"
+                >
+
+            </com.google.android.material.button.MaterialButton>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/acceptBtnReq"
+                android:layout_width="149dp"
+                android:layout_height="39dp"
+                android:text="@string/accept_burmese"
+                android:backgroundTint="@color/blue"
+                android:layout_marginRight="30dp"
+                >
+
+            </com.google.android.material.button.MaterialButton>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</com.google.android.material.card.MaterialCardView>

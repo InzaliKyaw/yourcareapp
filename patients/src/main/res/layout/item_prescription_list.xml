@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_medium_4"
+    >
+    <TextView
+        android:id="@+id/medicineNameCT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:fontFamily="@font/poppins"
+        android:text="@string/state_mm"
+        android:textSize="16sp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/amountCT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/poppins"
+        android:text="@string/township_mm"
+        android:textSize="16sp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/priceCT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:fontFamily="@font/poppins"
+        android:text="@string/address_detail_mm"
+        android:textSize="16sp">
+
+    </TextView>
+</RelativeLayout>
+

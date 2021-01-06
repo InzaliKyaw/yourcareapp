@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<TextView
+    android:id="@+id/medicineName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Amoxicillin"
+    android:textStyle="bold"
+    android:textSize="18dp"
+    android:layout_marginTop="@dimen/margin_medium_4"
+    android:layout_marginLeft="@dimen/margin_xlarge"
+    android:layout_marginBottom="@dimen/margin_medium_4"
+    android:fontFamily="@font/poppins_bold">
+
+</TextView>
+    <ImageView
+        android:id="@+id/addMedicine"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="@dimen/margin_medium_4"
+        android:layout_marginRight="@dimen/margin_xlarge"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_baseline_add_circle_24"
+        android:visibility="visible"
+        >
+
+    </ImageView>
+    <ImageView
+        android:id="@+id/removeMedicine"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="@dimen/margin_medium_4"
+        android:layout_marginRight="@dimen/margin_xlarge"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_baseline_remove_circle_24"
+        android:visibility="gone">
+
+    </ImageView>
+</RelativeLayout>

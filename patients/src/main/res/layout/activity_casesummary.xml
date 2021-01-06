@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/chat_bg">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/caseSummaryToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="@string/case_summary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/caseSummaryToolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.kofigyan.stateprogressbar.StateProgressBar
+                android:id="@+id/stateProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:spb_animateToCurrentProgressState="true"
+                app:spb_checkStateCompleted="true"
+                app:spb_currentStateDescriptionColor="@color/blue"
+                app:spb_currentStateNumber="one"
+                app:spb_maxStateNumber="two"
+                app:spb_stateBackgroundColor="#BDBDBD"
+                app:spb_stateDescriptionColor="#808080"
+                app:spb_stateForegroundColor="@color/blue"
+                app:spb_stateNumberBackgroundColor="#808080"
+                app:spb_stateNumberForegroundColor="#eeeeee"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium_3"
+                android:text="@string/birthdate">
+
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+<!--                <com.google.android.material.button.MaterialButton-->
+<!--                    android:id="@+id/btnDate"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:layout_marginLeft="@dimen/margin_medium_3"-->
+<!--                    android:backgroundTint="@color/white"-->
+<!--                    android:text="09"-->
+<!--                    android:textColor="@color/teal_patient"-->
+<!--                    app:cornerRadius="@dimen/margin_medium_4"-->
+<!--                    app:icon="@drawable/ic_ios_arrow_dropdown"-->
+<!--                    app:iconTint="@color/blue"-->
+<!--                    app:iconGravity="end">-->
+
+<!--                </com.google.android.material.button.MaterialButton>-->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="@dimen/margin_medium_3"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="@dimen/margin_medium_4"
+                    android:elevation="@dimen/margin_medium_4">
+                    <Spinner
+                        android:id="@+id/spinnerDays"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:entries="@array/days_array"
+                        android:spinnerMode="dialog"
+                        >
+
+                    </Spinner>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="@dimen/margin_medium_4"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="@dimen/margin_medium_4"
+                    android:elevation="@dimen/margin_medium_4">
+                    <Spinner
+                        android:id="@+id/spinnerMonths"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:entries="@array/months_array"
+                        android:textColor="@color/teal_patient"
+                        android:spinnerMode="dialog"
+                        >
+
+                    </Spinner>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="@dimen/margin_medium_4"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="@dimen/margin_medium_4"
+                    android:elevation="@dimen/margin_medium_4">
+                    <Spinner
+                        android:id="@+id/spinnerYears"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:entries="@array/years_array"
+                        android:textColor="@color/teal_patient"
+                        android:spinnerMode="dialog"
+                        >
+
+                    </Spinner>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium_3"
+                android:text="@string/height">
+
+            </TextView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/margin_medium_3"
+                android:layout_marginLeft="@dimen/margin_medium_3"
+                android:layout_marginRight="@dimen/margin_medium_3"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/white"
+                app:boxCornerRadiusBottomEnd="@dimen/margin_medium_4"
+                app:boxCornerRadiusBottomStart="@dimen/margin_medium_4"
+                app:boxCornerRadiusTopEnd="@dimen/margin_medium_4"
+                app:boxCornerRadiusTopStart="@dimen/margin_medium_4"
+                app:suffixText="ft">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/heightPatient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium_3"
+                android:text="@string/blood_type">
+
+            </TextView>
+
+            <RadioGroup
+                android:id="@+id/bloodTypeRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium_3"
+                android:layout_marginRight="@dimen/margin_medium_3"
+                android:orientation="horizontal"
+                android:soundEffectsEnabled="true"
+                android:weightSum="4">
+
+                <RadioButton
+                    android:id="@+id/Ablood"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="A">
+
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/Bblood"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="B">
+
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/Cblood"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="AB">
+
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/Dblood"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="O">
+
+                </RadioButton>
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium_3"
+                android:text="@string/weight">
+
+            </TextView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/margin_medium_4"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/white"
+                app:boxCornerRadiusBottomEnd="@dimen/margin_medium_4"
+                app:boxCornerRadiusBottomStart="@dimen/margin_medium_4"
+                app:boxCornerRadiusTopEnd="@dimen/margin_medium_4"
+                app:boxCornerRadiusTopStart="@dimen/margin_medium_4"
+                app:suffixText="lb">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/weightPatient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_medium_3"
+                    android:layout_marginRight="@dimen/margin_medium_3"
+                    >
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium_3"
+                android:text="@string/blood_pressure">
+
+            </TextView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:elevation="@dimen/margin_medium_4"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/white"
+                app:boxCornerRadiusBottomEnd="@dimen/margin_medium_4"
+                app:boxCornerRadiusBottomStart="@dimen/margin_medium_4"
+                app:boxCornerRadiusTopEnd="@dimen/margin_medium_4"
+                app:boxCornerRadiusTopStart="@dimen/margin_medium_4"
+                app:suffixText="mmHg">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/bloodPressurePatient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_medium_3"
+                    android:layout_marginRight="@dimen/margin_medium_3"
+                    >
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium_3"
+                android:text="@string/allergy_medicine">
+
+            </TextView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/margin_medium_4"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/white"
+                app:boxCornerRadiusBottomEnd="@dimen/margin_medium_4"
+                app:boxCornerRadiusBottomStart="@dimen/margin_medium_4"
+                app:boxCornerRadiusTopEnd="@dimen/margin_medium_4"
+                app:boxCornerRadiusTopStart="@dimen/margin_medium_4"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/allergicTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_medium_3"
+                    android:layout_marginRight="@dimen/margin_medium_3"
+                    >
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnContinueCaseSummary"
+                android:layout_width="wrap_content"
+                android:layout_height="54dp"
+                android:layout_gravity="end"
+                android:layout_margin="@dimen/margin_medium_3"
+                android:backgroundTint="@color/blue"
+                android:text="@string/to_be_continue"
+                app:cornerRadius="8dp"
+                app:icon="@drawable/ic_baseline_arrow_forward_24"
+                app:iconGravity="textEnd">
+
+            </com.google.android.material.button.MaterialButton>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

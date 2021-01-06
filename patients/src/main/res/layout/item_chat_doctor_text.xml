@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/doctorProfileCard"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:cardCornerRadius="15dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="@dimen/margin_small">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/doctor"
+            android:scaleType="centerCrop"
+            android:padding="@dimen/margin_small"
+            >
+        </ImageView>
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/textCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/margin_medium_4"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginBottom="5dp"
+        android:layout_toRightOf="@id/doctorProfileCard"
+        app:cardCornerRadius="@dimen/margin_medium_4"
+        android:backgroundTint="@color/white"
+        >
+        <TextView
+            android:id="@+id/chatText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Hello"
+            android:textSize="14dp">
+
+        </TextView>
+    </com.google.android.material.card.MaterialCardView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/textCard"
+        android:layout_marginStart="@dimen/margin_medium_3"
+        android:layout_alignParentStart="true">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="3dp"
+            android:src="@drawable/icons8_double_tick_24">
+        </ImageView>
+        <TextView
+            android:id="@+id/chatDeliveredTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:00 PM">
+
+        </TextView>
+    </LinearLayout>
+
+
+</RelativeLayout>

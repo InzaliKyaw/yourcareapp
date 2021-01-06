@@ -7,10 +7,11 @@ import com.example.doctors.R
 import com.example.doctors.mvp.presenters.LoginPresenter
 import com.example.doctors.mvp.presenters.impls.LoginPresenterImpl
 import com.example.doctors.mvp.view.LoginView
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity:BaseActivity(),LoginView{
-    private lateinit var mPresenter: com.example.doctors.mvp.presenters.LoginPresenter
+    private lateinit var mPresenter: LoginPresenter
     companion object{
         fun newIntent(context: Context): Intent {
             return Intent(context ,LoginActivity::class.java)
@@ -21,14 +22,12 @@ class LoginActivity:BaseActivity(),LoginView{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-
         setUpPresenter()
-
         setUpActionListeners()
     }
 
-    override fun navigateToHomeScreen() {
-        startActivity(MainActivity.newIntent(this))
+    override fun navigateToHomeScreen(email:String) {
+        startActivity(MainActivity.newIntent(this,email))
     }
     fun setUpPresenter(){
         mPresenter = getPresenter<LoginPresenterImpl,LoginView>()
@@ -50,6 +49,6 @@ class LoginActivity:BaseActivity(),LoginView{
 
 
     override fun showError(error: String) {
-
+        Snackbar.make(window.decorView,error,Snackbar.LENGTH_LONG)
     }
 }

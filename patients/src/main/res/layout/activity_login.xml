@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/login_bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/login"
+        android:layout_gravity="center">
+
+    </ImageView>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        android:layout_marginLeft="@dimen/margin_medium_3"
+        android:layout_marginRight="@dimen/margin_medium_3"
+        android:layout_marginBottom="@dimen/margin_medium_4"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/patientLoginEmail"
+            android:backgroundTint="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="69dp">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        android:hint="@string/password"
+        android:layout_marginLeft="@dimen/margin_medium_3"
+        android:layout_marginRight="@dimen/margin_medium_3">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/patientLoginPswd"
+            android:backgroundTint="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLoginPatient"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:text="@string/login"
+        android:backgroundTint="@color/blue"
+        app:cornerRadius="8dp"
+        android:layout_marginLeft="@dimen/margin_medium_3"
+        android:layout_marginRight="@dimen/margin_medium_3">
+
+    </com.google.android.material.button.MaterialButton>
+    <TextView
+        android:id="@+id/btnRegisterPatient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/signup"
+        >
+
+    </TextView>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSignInFB"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:text="@string/sign_in_with_fb"
+        android:backgroundTint="@color/fb_blue"
+        app:cornerRadius="8dp"
+        app:icon="@drawable/ic_baseline_facebook_24"
+        android:layout_marginLeft="@dimen/margin_medium_3"
+        android:layout_marginRight="@dimen/margin_medium_3">
+
+    </com.google.android.material.button.MaterialButton>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSignInApple"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:text="@string/sign_in_with_apple"
+        android:backgroundTint="@color/black"
+        app:cornerRadius="8dp"
+        app:icon="@drawable/ic_apple"
+        android:layout_marginLeft="@dimen/margin_medium_3"
+        android:layout_marginRight="@dimen/margin_medium_3">
+
+    </com.google.android.material.button.MaterialButton>
+
+</LinearLayout>

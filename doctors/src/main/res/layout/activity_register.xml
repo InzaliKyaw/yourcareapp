@@ -2,18 +2,52 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@mipmap/dr_login_1"
     android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="The CareMM"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:lineHeight="51sp"
+        android:layout_marginTop="45dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/blue"
+        android:shadowColor="#297b7b7b"
+        android:shadowDy="3"
+        android:shadowRadius="1"
+        android:fontFamily="@font/poppins_bold">
+
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="#297b7b7b"
+        android:shadowDy="3"
+        android:shadowRadius="1"
+        android:fontFamily="@font/poppins"
+        android:textStyle="normal"
+        android:textSize="16sp"
+        android:textColor="@color/blue"
+        android:letterSpacing="-0.02"
+        android:lineSpacingExtra="9sp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/doctor_app"
+        />
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/email"
         android:layout_marginLeft="@dimen/margin_medium_3"
-        android:layout_marginTop="@dimen/margin_xxlarge"
+        android:layout_marginTop="220dp"
         android:layout_marginRight="@dimen/margin_medium_3"
        >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/doctorEmail"
+            android:backgroundTint="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -24,12 +58,13 @@
         android:layout_height="wrap_content"
         android:hint="@string/name"
         android:layout_marginLeft="@dimen/margin_medium_3"
-        android:layout_marginTop="@dimen/margin_medium_3"
+        android:layout_marginTop="@dimen/margin_medium_4"
         android:layout_marginRight="@dimen/margin_medium_3"
-        android:layout_marginBottom="@dimen/margin_medium_3">
+       >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/doctorName"
+            android:backgroundTint="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -40,40 +75,54 @@
         android:layout_height="wrap_content"
         android:hint="@string/password"
         android:layout_marginLeft="@dimen/margin_medium_3"
-        android:layout_marginTop="@dimen/margin_medium_3"
+        android:layout_marginTop="@dimen/margin_medium_4"
         android:layout_marginRight="@dimen/margin_medium_3"
-        android:layout_marginBottom="@dimen/margin_medium_3">
+        android:layout_marginBottom="@dimen/margin_medium_4">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/doctorPswd"
+            android:backgroundTint="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
         </com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/speciality"
-        android:layout_marginLeft="@dimen/margin_medium_3"
-        android:layout_marginRight="@dimen/margin_medium_3">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/doctorSpeciality"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        </com.google.android.material.textfield.TextInputEditText>
-    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/registerDoctor"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="54dp"
+        android:backgroundTint="@color/blue"
         android:text="@string/register"
-        android:layout_margin="@dimen/margin_medium_3">
+        app:cornerRadius="8dp"
+        android:layout_marginLeft="@dimen/margin_medium_3"
+        android:layout_marginRight="@dimen/margin_medium_3"
+        android:layout_marginTop="@dimen/margin_medium_4">
 
     </com.google.android.material.button.MaterialButton>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/already_have_an_account"
+            >
+        </TextView>
+        <TextView
+            android:id="@+id/loginTxtBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/log_in"
+            android:textColor="@color/blue"
+            android:textSize="17sp"
+            android:layout_marginLeft="@dimen/margin_medium_4">
+        </TextView>
+    </LinearLayout>
+
 
 </LinearLayout>

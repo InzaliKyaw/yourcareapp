@@ -7,4 +7,16 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="blue">#005ccc</color>
+    <color name="fb_blue">#1b76f4</color>
+    <color name="text_box_color">#f7f3ff</color>
+    <color name="orange">#ff9657</color>
+    <color name="red">#ff6767</color>
+    <color name="grey">#D3D3D3</color>
+    <color name="grey_light">#cccccc</color>
+    <color name="text_grey">#424656</color>
+    <color name="chat_bg">#f6f6f6</color>
+    <color name="light_blue">#e6f1ff</color>
+    <color name="login_bg">#cee7f5</color>
+
 </resources>

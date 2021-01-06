@@ -1,9 +1,10 @@
 package com.example.shared.data.model
 
+
 import com.example.shared.network.auth.AuthManager
 import com.example.shared.network.auth.FirebaseAuthManager
 
-object AuthenticationModelImpl:AuthenticationModel {
+object AuthenticationModelImpl: AuthenticationModel {
     override var mAuthManager: AuthManager = FirebaseAuthManager
 
 
@@ -16,14 +17,37 @@ object AuthenticationModelImpl:AuthenticationModel {
         mAuthManager.login(email,password,onSuccess,onFailure)
     }
 
+    override fun getCurrentUser(onSuccess: (String) -> Unit, onFailure: (String) -> Unit) {
+        mAuthManager.getCurrentUser(onSuccess, onFailure)
+    }
+
     override fun register(
         email: String,
         password: String,
         userName: String,
-        speciality: String,
         onSuccess: () -> Unit,
         onFailure: (String) -> Unit
     ) {
-        mAuthManager.register(email,password,userName,speciality,onSuccess,onFailure)
+        mAuthManager.register(email,password,userName,onSuccess,onFailure)
+    }
+
+    override fun patientLogin(
+        email: String,
+        password: String,
+        onSuccess: () -> Unit,
+        onFailure: (String) -> Unit
+    ) {
+        mAuthManager.patientLogin(email, password, onSuccess, onFailure)
+    }
+
+    override fun patientRegister(
+        email: String,
+        password: String,
+        name: String,
+        deviceId: String,
+        onSuccess: () -> Unit,
+        onFailure: (String) -> Unit
+    ) {
+        mAuthManager.patientRegister(email,password,name,deviceId,onSuccess,onFailure)
     }
 }

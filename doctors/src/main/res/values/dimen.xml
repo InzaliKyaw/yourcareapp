@@ -12,5 +12,4 @@
     <dimen name="margin_xxlarge">48dp</dimen>
     <dimen name="margin_xxxlarge">150dp</dimen>
 
-    <dimen name="video_view_exo_player_play_pause_button_dimen">72dp</dimen>
 </resources>

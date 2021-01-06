@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/margin_medium_3"
+    android:orientation="vertical">
+<TextView
+    android:id="@+id/medicineName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/penicillin"
+    android:textSize="16sp"
+    android:fontFamily="@font/poppins_bold"
+    android:textColor="@color/text_grey"
+    >
+</TextView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/amountLbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/amount_mm"
+            android:textSize="15sp"
+            android:fontFamily="@font/poppins"
+            android:layout_alignParentLeft="true">
+        </TextView>
+        <TextView
+            android:id="@+id/amountText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="700mg"
+            android:textSize="15sp"
+            android:fontFamily="@font/poppins"
+            android:layout_centerHorizontal="true">
+        </TextView>
+
+        <TextView
+            android:id="@+id/countLbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/times_mm"
+            android:textSize="15sp"
+            android:fontFamily="@font/poppins"
+            android:layout_below="@+id/amountLbl"
+            >
+        </TextView>
+        <TextView
+            android:id="@+id/countText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 Tablet"
+            android:textSize="15sp"
+            android:fontFamily="@font/poppins"
+           android:layout_alignStart="@+id/amountText"
+            android:layout_below="@+id/amountText">
+        </TextView>
+
+        <TextView
+            android:id="@+id/daysLbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/days_mm"
+            android:textSize="15sp"
+            android:fontFamily="@font/poppins"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/countLbl">
+        </TextView>
+        <TextView
+            android:id="@+id/daysText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3 days"
+            android:textSize="15sp"
+            android:fontFamily="@font/poppins"
+            android:layout_below="@id/countText"
+            android:layout_alignStart="@id/amountText"
+            >
+        </TextView>
+
+        <TextView
+            android:id="@+id/routineLbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/routine_mm"
+            android:textSize="15sp"
+            android:fontFamily="@font/poppins"
+            android:layout_below="@id/daysLbl"
+            android:layout_alignParentLeft="true">
+        </TextView>
+        <TextView
+            android:id="@+id/routineText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Morning/Noon/Evening"
+            android:textSize="15sp"
+            android:fontFamily="@font/poppins"
+            android:layout_below="@id/daysText"
+            android:layout_alignStart="@id/amountText">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/remark_mm"
+            android:textSize="15sp"
+            android:fontFamily="@font/poppins"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/routineLbl">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Take it after meal"
+            android:textSize="15sp"
+            android:fontFamily="@font/poppins"
+            android:layout_below="@id/routineText"
+            android:layout_alignStart="@id/amountText">
+        </TextView>
+    </RelativeLayout>
+
+
+</LinearLayout>
