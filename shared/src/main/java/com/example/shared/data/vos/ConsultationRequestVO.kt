@@ -79,7 +79,7 @@ fun toConvertPatient(data: HashMap<String, String>?): PatientsVO? {
         if (data.get("allergyMedicine") == null){
             patientsVO.allergyMedicine = ""
         }
-        patientsVO.allergyMedicine = data?.get("allergyMedicine") as String
+        //patientsVO.allergyMedicine = data?.get("allergyMedicine") as String
 
         if (data.get("bloodType") == null){
             patientsVO.bloodType = ""

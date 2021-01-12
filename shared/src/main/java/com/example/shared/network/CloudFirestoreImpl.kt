@@ -746,6 +746,10 @@ object CloudFirestoreImpl : FirebaseApi, BaseModel() {
 
     }
 
+    override fun getCheckout(onSuccess: (List<CheckOutVO>) -> Unit, onFailure: (String) -> Unit) {
+
+    }
+
     /*
     //toLog//towrite
     override fun acceptRequest(

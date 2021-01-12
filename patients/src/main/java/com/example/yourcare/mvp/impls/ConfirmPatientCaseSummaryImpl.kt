@@ -72,16 +72,15 @@ class ConfirmPatientCaseSummaryImpl : ConfirmCaseSummaryPresenter,
 //                specialitiesVO = SpecialitiesVO(it.id,it.name,it.image)
 //            }
 //        })
-        var count: String = ""
+        var count: Long = 0
         mYourcareModel.getConsultationRequestWithSpeciality("bones_and_joints", onSuccess = {
-           // count = it.size.toString()
-            Log.d(TAG, "SUCCESS")
+           count = it.size.toLong()
+            consultationReqId = count+1
+            Log.d(TAG, "SUCCESS"+consultationReqId)
+
         }, onFailure = {
             Log.d(TAG, "FAILED")
         })
-
-
-        consultationReqId = 7.toLong()
         specialitiesVO =
             SpecialitiesVO(id = "bones_and_joints", name = "Bones and Joints", image = "")
         mYourcareModel.consultationRequestStart(
@@ -92,6 +91,7 @@ class ConfirmPatientCaseSummaryImpl : ConfirmCaseSummaryPresenter,
             patientsVO,
             specialitiesVO
         )
+
         mView.navigateToStartConsultation(patientId, consultationReqId)
 
 //            caseSummaryVO.forEach {

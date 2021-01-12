@@ -15,6 +15,6 @@ data class ChatVO (
         @SerializedName("")
         var sendAt:String? = "",
 
-        @SerializedName("sent_by")
+        @SerializedName("")
         var sendBy:String? = ""
 )

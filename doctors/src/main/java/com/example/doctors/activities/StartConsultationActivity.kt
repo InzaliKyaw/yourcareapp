@@ -3,6 +3,7 @@ package com.example.doctors.activities
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.doctors.R
 import com.example.doctors.adapters.ConsultationRequestCaseSAdapter
@@ -18,9 +19,11 @@ class StartConsultationActivity:BaseActivity(),StartConsultationView{
     private lateinit var mPresenter:StartConsultationPresenter
     private var consultationId:Long = 0
     private lateinit var mConsultationRequestCaseSAdapter:ConsultationRequestCaseSAdapter
+    private lateinit var speciality:String
 
     companion object{
         const val CONSULTATION = "CONSULTATION"
+        const val TAG = "START CONSULTATION"
         fun newIntent(context: Context,consultationId:Long): Intent {
             val intent = Intent(context,StartConsultationActivity::class.java)
             intent.putExtra(CONSULTATION,consultationId)
@@ -61,7 +64,8 @@ class StartConsultationActivity:BaseActivity(),StartConsultationView{
         patientAllergySC.text = consultationRequestVO.patientsVO?.allergyMedicine.toString()
         patientWeightSC.text = consultationRequestVO.patientsVO?.weight.toString()
         patientBloodPressureSC.text = consultationRequestVO.patientsVO?.bloodPressure.toString()
-
+        speciality = consultationRequestVO.specialitiesVO?.name.toString()
+        Log.d(TAG,"SPECIALITY"+speciality)
     }
 
     fun setUpRecycelQA(mAdapter:ConsultationRequestCaseSAdapter){

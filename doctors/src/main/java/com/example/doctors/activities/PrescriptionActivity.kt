@@ -32,12 +32,10 @@ class PrescriptionActivity:BaseActivity(),PrescriptionView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_presciption)
         setUpPresenter()
-        setSupportActionBar(presciptionToolbar)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setDisplayShowHomeEnabled(true)
+        setUpListeners()
 
         val speciality = intent.extras?.get(PRESCIPTION).toString()
-        mPresenter.loadMostUsedMedicineBySpeciality(this,"bones_and_joints")
+        mPresenter.loadMostUsedMedicineBySpeciality(this,"stomach")
         prescriptionAdapter = PrescriptionAdapter(mPresenter)
         setUpRecyclerMedicine(prescriptionAdapter)
 
@@ -55,6 +53,12 @@ class PrescriptionActivity:BaseActivity(),PrescriptionView {
     override fun showDialogPrescription(medicineId: String,pillName:String) {
         PrescriptionDialogFragment.newFragment(medicineId,pillName)
             .show(supportFragmentManager,PrescriptionDialogFragment.TAG_ADD_MEDICINE_DIALOG)
+    }
+
+    fun setUpListeners(){
+        setSupportActionBar(presciptionToolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
     }
 
 

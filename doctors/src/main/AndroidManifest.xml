@@ -38,19 +38,23 @@
 
         </activity>
         <activity android:name=".activities.ChatActivity"
-            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+            android:parentActivityName=".activities.MainActivity">
 
         </activity>
         <activity android:name=".activities.GeneralQuestionTemplateActivity"
-            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+            android:parentActivityName=".activities.ChatActivity">
 
         </activity>
         <activity android:name=".activities.MedicalRecordActivity"
-            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+            android:parentActivityName=".activities.ChatActivity">
 
         </activity>
         <activity android:name=".activities.PrescriptionActivity"
-            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+            android:parentActivityName=".activities.ChatActivity">
 
         </activity>
     </application>

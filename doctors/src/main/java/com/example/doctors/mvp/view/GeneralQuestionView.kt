@@ -5,4 +5,5 @@ import com.example.shared.data.vos.GeneralQuestionTemplateVO
 interface GeneralQuestionView:BaseView {
     fun showGeneralQuestionTemplate(gQTlist:List<GeneralQuestionTemplateVO>)
     fun sendSelectedQuestion(quesion:String)
+    fun navigateToChat()
 }

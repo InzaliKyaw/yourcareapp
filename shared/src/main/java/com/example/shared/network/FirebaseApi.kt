@@ -166,12 +166,17 @@ interface FirebaseApi {
         onFailure: (String) -> Unit
     )
 
+
     fun getPrescriptionFromConsultation(
         consultationId: Long,
         onSuccess: (List<MedicineVO>) -> Unit,
         onFailure: (String) -> Unit
     )
 
+    fun getCheckout(
+        onSuccess: (List<CheckOutVO>) -> Unit,
+        onFailure: (String) -> Unit
+    )
     /*
         fun acceptRequest(
             responseStatus: String,

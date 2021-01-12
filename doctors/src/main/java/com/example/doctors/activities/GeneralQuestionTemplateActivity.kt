@@ -26,9 +26,8 @@ class GeneralQuestionTemplateActivity:BaseActivity(),GeneralQuestionView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gqtemplate)
         setUpPresenter()
-        setSupportActionBar(generalQTtoolbar)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setDisplayShowHomeEnabled(true)
+        setUpListeners()
+
         mPresenter.onUiReady(this,this)
         generalQuestionTemplateAdapter = GeneralQuestionTemplateAdapter(mPresenter)
         setUpGeneralRecycler(generalQuestionTemplateAdapter)
@@ -43,8 +42,18 @@ class GeneralQuestionTemplateActivity:BaseActivity(),GeneralQuestionView {
         startActivity(ChatActivity.newIntent(this,1))
     }
 
+    override fun navigateToChat() {
+        startActivity(ChatActivity.newIntent(this,1))
+    }
+
     override fun showError(error: String) {
 
+    }
+
+    fun setUpListeners(){
+        setSupportActionBar(generalQTtoolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
     }
     fun setUpPresenter(){
         mPresenter = getPresenter<GeneralQuestionPresenterImpl, GeneralQuestionView>()
