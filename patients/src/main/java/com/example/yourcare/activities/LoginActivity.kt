@@ -37,6 +37,7 @@ class LoginActivity:BaseActivity(),LoginView{
         mPresenter = getPresenter<LoginPresenterImpl,LoginView>()
     }
     fun setUpActionListener(){
+
         btnLoginPatient.setOnClickListener {
             mPresenter.onTapLogin(this,patientLoginEmail.text.toString(),patientLoginPswd.text.toString())
 

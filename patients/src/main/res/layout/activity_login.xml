@@ -25,6 +25,7 @@
             android:id="@+id/patientLoginEmail"
             android:backgroundTint="@color/white"
             android:layout_width="match_parent"
+            android:singleLine="true"
             android:layout_height="69dp">
 
         </com.google.android.material.textfield.TextInputEditText>
@@ -34,6 +35,8 @@
         android:layout_width="match_parent"
         android:layout_height="69dp"
         android:hint="@string/password"
+        app:passwordToggleTint="@color/blue"
+        app:passwordToggleEnabled="true"
         android:layout_marginLeft="@dimen/margin_medium_3"
         android:layout_marginRight="@dimen/margin_medium_3">
 
@@ -41,6 +44,7 @@
             android:id="@+id/patientLoginPswd"
             android:backgroundTint="@color/white"
             android:layout_width="match_parent"
+            android:singleLine="true"
             android:layout_height="wrap_content">
 
         </com.google.android.material.textfield.TextInputEditText>

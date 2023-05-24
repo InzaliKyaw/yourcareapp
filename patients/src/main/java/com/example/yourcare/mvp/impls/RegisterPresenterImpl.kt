@@ -2,6 +2,7 @@ package com.example.yourcare.mvp.impls
 
 import android.content.Context
 import android.util.Log
+import android.widget.Toast
 import androidx.lifecycle.LifecycleOwner
 import com.example.shared.data.model.AuthenticationModel
 import com.example.shared.data.model.AuthenticationModelImpl
@@ -43,14 +44,15 @@ class RegisterPresenterImpl : RegisterPresenter, AbstractBasePresenter<RegisterV
                     deviceId = deviceId
                 )
                 mYourcareModel.registerNewPatient(patientVO)
+                mView.successMessage()
                 mView.navigateToLoginScreen(name, email)
             },{
-
+                Log.d(TAG,"Failed Registration"+it)
             })
-
 
         }, onFailure = {
             Log.d(TAG,"Failed Registration"+it)
+            mView.showError(it)
         })
     }
 }

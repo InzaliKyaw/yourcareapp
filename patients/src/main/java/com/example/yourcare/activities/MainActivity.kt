@@ -36,7 +36,7 @@ class MainActivity:BaseActivity() {
             .commit()
 
         bottomPatient.setOnNavigationItemSelectedListener (object :
-           BottomNavigationView.OnNavigationItemSelectedListener {
+            BottomNavigationView.OnNavigationItemSelectedListener {
             override fun onNavigationItemSelected(item: MenuItem): Boolean {
                 when(item.itemId){
                     R.id.home ->{
@@ -59,7 +59,7 @@ class MainActivity:BaseActivity() {
             }
         }
 
-                )
+        )
 
-        }
     }
+}
